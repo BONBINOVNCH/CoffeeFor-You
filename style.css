@@ -52,23 +52,31 @@ body {
 .burger {
   width: 27px;
   height: 15px;
+  display: none;
 }
 
 
 .main_page{
   display: flex;
   margin: 89px 165px 0px 165px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .main_left{
-  width: 70%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.main_right {
+  display: flex;
+}
 
 .heart{
-  flex-shrink: 1;
+  flex: 0 1 auto;
+  width: 100%;
 }
 
 .main_text{
@@ -104,6 +112,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 188px 175px 81px 149px;
+  flex-wrap: wrap;
 }
 .add_block {
   width: 354px;
@@ -180,6 +189,7 @@ body {
   justify-content: space-between;
   margin-bottom: 80px;
   margin-top: 70px;
+  flex-wrap: wrap;
 }
 .product {
   position: relative;
@@ -240,8 +250,8 @@ body {
   line-height: 26px;
   letter-spacing: 40%;
   text-align: center;
-  width: 671px;
-  font-size: 16px;
+  /* width: 671px;
+  font-size: 16px; */
 }
 .zero_page_button {
   font-family: Open Sans;
@@ -255,6 +265,7 @@ body {
 }
 .first_page {
   display: flex;
+  flex-wrap: wrap;
   height: 674px;
   background-color: white;
 }
@@ -315,6 +326,7 @@ body {
 }
 .cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .card {
@@ -376,16 +388,18 @@ body {
   padding: 0px 165px;
   padding-top: 87px;
   display: flex;
+  flex-wrap: wrap;
   background-color: #f6f2ee;
   padding-bottom: 94px;
 }
 .fourth_page_map {
-  width: 587px;
+  flex: 1 1 auto;
 }
 .fourth_page_block {
   padding: 42px 80px 42px 82px;
-  width: 100%;
+
   background-color: white;
+  flex: 1 1 auto;
 }
 .fourth_page_block_title {
   color: #d48a5c;
@@ -592,4 +606,51 @@ input{
 
 .prise span {
   color: #EAB665;
+}
+
+@media (max-width: 1423px){
+  .heart{
+    margin-top: 80px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1245px) {
+  .burger{
+    display: block;
+  }
+  .left_block {
+    display: none;
+  }
+  .right_block {
+    display: none;
+  }
+  .search_block{
+    justify-content: end;
+  }
+  .right_side_block{
+    margin-right: 0px;
+  }
+  .header{
+    margin: 83px;
+    margin-top: 33px;
+  }
+  .lup{
+    margin-right: 20px;
+  }
+  .main_page {
+    margin: 0px 83px;
+  }
+}
+
+@media (max-width: 460px){
+    .header{
+    margin: 33px;
+    margin-top: 33px;
+  }
+    .main_page {
+    margin: 0px 33px;
+    text-align: center;
+  }
+
 }
