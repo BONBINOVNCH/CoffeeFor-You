@@ -280,14 +280,21 @@ body {
 .first_page {
   display: flex;
   flex-wrap: wrap;
-  height: 674px;
+  padding: 0px 165px 0px 165px;
   background-color: white;
+  justify-content: space-between;
+  align-items: center;
 }
 .first_page_left {
-  height: 337px;
-  width: 677px;
-  margin: 170px 54px 0px 165px;
+width: 70%;
+  margin: 170px 0px 165px;
 }
+
+.first_page_right {
+  width: 30%;
+}
+
+
 .header1 {
   font-family: ZCOOL XiaoWei;
   font-size: 55px;
@@ -622,6 +629,21 @@ input{
   color: #EAB665;
 }
 
+@media (max-width: 1453px) {
+  .first_page_left {
+    width: 100%;
+  }
+  .first_page_right{
+    width: 100%;
+    display: flexbox;
+
+  }
+  .coffe_machine{
+    display: block;
+    margin: auto;
+  }
+}
+
 @media (max-width: 1423px){
   .heart{
     margin-top: 80px;
@@ -686,6 +708,9 @@ input{
   .popular_products{
     margin: 0px 83px;
   }
+  .first_page{
+    padding: 0px 83px;
+  }
 }
 
 @media (max-width: 847px){
@@ -705,6 +730,9 @@ input{
   .add{
     margin: 0px 33px;
   }
+  .popular_product{
+    margin-bottom: 20px;
+  }
   .product{
     width: 100%;
     margin-left: 15px;
@@ -723,6 +751,21 @@ input{
   }
   .title_product{
     font-size: 45px;
+  }
+  .first_page{
+    padding: 0px 33px;
+  }
+  .first_page_left{
+    margin: 30px 0px;
+  }
+  .first_page_right{
+    width: 100%;
+  }
+    .coffe_machine{
+    width: 100%;
+  }
+  .header1 {
+    font-size: 33px;
   }
 }
 
@@ -749,5 +792,8 @@ input{
   }
       .popular_products{
     margin: 0px 33px;
+  }
+    .first_page{
+    padding: 0px 15px;
   }
 }
