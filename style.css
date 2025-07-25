@@ -242,7 +242,7 @@ body {
 
 
 .zero_page {
-  width: 98.932vw;
+  width: 100%;
   background-image: url("img/coffee-beans-top-view-white-background-space-text 1.png");
   height: 729px;
   background-repeat: no-repeat;
@@ -627,6 +627,9 @@ input{
     margin-top: 80px;
     text-align: center;
   }
+  .zero_page_text{
+    margin: 0px 165px;
+  }
 }
 
 @media (max-width: 1245px) {
@@ -662,7 +665,9 @@ input{
       width: 354px;
       height: 247px;
   }
-  
+    .zero_page_text{
+    margin: 0px 83px;
+  }
 }
 
 @media (max-width: 540px){
@@ -693,5 +698,7 @@ input{
   .add_hight_text{
     width: 170px;
   }
-
+  .zero_page_text{
+    margin: 0px 15px;
+  }
 }
