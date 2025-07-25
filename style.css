@@ -452,8 +452,7 @@ width: 70%;
   padding: 7px 22px 6px 22px;
 }
 .fifth_page {
-  padding: 0px 165px;
-  background-color: #f6f2ee;
+  margin: 0px 165px;
 }
 .fifth_page_button{
   font-family: Open Sans;
@@ -731,8 +730,12 @@ input{
     margin-top: 47px;
     }
 
-    .fourth_page_map{
+  .fourth_page_map{
       width: 100%;
+    }
+
+  .fifth_page {
+      margin: 0px 83px;
     }
 }
 
@@ -815,6 +818,7 @@ input{
   }
   .first_page_left{
     margin: 30px 0px;
+    text-align: center;
   }
   .first_page_right{
     width: 100%;
@@ -823,6 +827,9 @@ input{
     width: 100%;
   }
   .header1 {
+    font-size: 33px;
+  }
+  .header2{
     font-size: 33px;
   }
     .second_page {
@@ -834,6 +841,9 @@ input{
     .fourth_page {
     margin: 0px 33px;
     margin-top: 87px;
+    }
+    .fifth_page {
+      margin: 0px 33px;
     }
 }
 
@@ -883,4 +893,23 @@ input{
     margin: 0px 15px;
     margin-top: 47px;
   }
+      .fifth_page {
+      margin: 0px 15px;
+    }
+    .fifth_page .cards {
+      width: 100%;
+    }
+    /* .fifth_page .card {
+      width: 290px;
+    }*/
+    .fifth_page .card_img  img {
+      width: 100%;
+    } 
+    .fifth_page .card_img {
+      width: 100%;
+    } 
+        .fifth_page_header {
+        font-size: 33px;
+        margin-bottom: 30px;
+        }
 }
