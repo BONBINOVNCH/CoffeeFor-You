@@ -320,9 +320,7 @@ width: 70%;
   margin-top: 33px;
 }
 .second_page {
-  
-
-  margin: 0px 165px;
+  margin: 0px 165px 40px 165px;
 }
 .header_div {
   display: flex;
@@ -407,8 +405,8 @@ width: 70%;
   margin-top: 8px;
 }
 .fourth_page {
-  padding: 0px 165px;
-  padding-top: 87px;
+  margin: 0px 165px;
+  margin-top: 87px;
   display: flex;
   flex-wrap: wrap;
   background-color: #f6f2ee;
@@ -721,13 +719,25 @@ input{
   .first_page{
     padding: 0px 83px;
   }
-  .second_page {
+    .second_page {
+    margin: 0px 83px 40px 83px;
+  }
+    .third_page {
     margin: 0px 83px;
   }
-  .third_page {
-  margin: 0px 83px;
+
+  .fourth_page {
+    margin: 0px 83px;
+    margin-top: 47px;
+    }
+
+    .fourth_page_map{
+      width: 100%;
+    }
 }
-}
+
+
+
 
 @media (max-width: 887px){
   .header_div{
@@ -757,6 +767,7 @@ input{
     margin-top: 60px;
     margin-bottom: 30px;
   }
+  
 }
 
 @media (max-width: 847px){
@@ -820,6 +831,10 @@ input{
     .third_page {
     margin: 0px 33px;
   }
+    .fourth_page {
+    margin: 0px 33px;
+    margin-top: 87px;
+    }
 }
 
 @media (max-width: 480px){
@@ -828,11 +843,11 @@ input{
     margin-top: 33px;
   }
     .main_page {
-    margin: 0px 33px;
+    margin: 30px 33px;
     text-align: center;
   }
     .add{
-    margin: 0px 15px;
+    margin: 30px 15px;
   }
     .add_block{
       width: 98%;
@@ -863,5 +878,9 @@ input{
   }
   .third_page {
     margin: 0px 15px;
+  }
+  .fourth_page {
+    margin: 0px 15px;
+    margin-top: 47px;
   }
 }
