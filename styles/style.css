@@ -3,6 +3,7 @@ body {
   font-family: Open Sans;
   background-color: #f6f2ee;
 }
+input {outline:none;}
 
 .header{
   margin-top: 33px;
