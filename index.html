@@ -18,7 +18,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/burger.css">
     <title>CoffeeFor You</title>
   </head>
   <body>
@@ -48,12 +49,29 @@
 
             <div class="search_block header_block">
                 <img class="lup" src="./img/Лупа.png" alt="" srcset="">
-                <img class="burger" src="./img/Бургер.png" alt="" srcset="">
+
+                <div class="burger_block">
+                  <div class="burger"><span></span></div>
+                </div>
+    
             </div>
 
           </div>
 
         </div>
+
+        <nav class="burger_menu">
+
+          <ul class="burger_list">
+            <li class="option">Home</li>
+            <li class="option">About</li>
+            <li class="option">Manu</li>
+            <li class="option">Reservation</li>
+            <li class="option">Page</li>
+            <li class="option">Shop</li>
+            <li class="option">Contact</li>
+          </ul>
+        </nav>
       </header> 
 
        <div class="main_page">
@@ -417,5 +435,7 @@
 
       <h4 class="reserved">ALL RIGHT RESERVED © 2022</h4>
     </footer> 
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
