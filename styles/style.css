@@ -3,9 +3,11 @@ body {
   font-family: Open Sans;
   background-color: #f6f2ee;
 }
+input {outline:none;}
 
 .header{
   margin-top: 33px;
+  
 }
 
 .header_blocks {
@@ -127,7 +129,7 @@ body {
 .sub_add_block {
     width: 100%;
     height: 100%;
-    background-image: url("./img/Mask group.png");
+    background-image: url("../img/Mask group.png");
     position: relative;
     bottom: 13px;
     left: 16px
@@ -140,19 +142,19 @@ body {
 }
 
 .michalka{
-  background-image: url("./img/Мішалка.png");
+  background-image: url("../img/Мішалка.png");
   background-size: cover;
   background-position: 100%;
 }
 
 .michalka2{
-  background-image: url("./img/michalka2.png");
+  background-image: url("../img/michalka2.png");
   background-size: cover;
   background-position: 100%;
 }
 
 .add_hight_text {
-  background-image: url("./img/Закрутка.png");
+  background-image: url("../img/Закрутка.png");
   background-size: cover;
   width: 50%;
   height: 25%;
@@ -243,7 +245,7 @@ body {
 
 .zero_page {
   width: 100%;
-  background-image: url("img/coffee-beans-top-view-white-background-space-text 1.png");
+  background-image: url("../img/coffee-beans-top-view-white-background-space-text 1.png");
   height: 729px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -615,10 +617,12 @@ input{
   display: flex;
   align-items: center;
   margin-bottom: 1px;
+  text-align: center;
 }
 
 .star{
   margin-left: 3.48px;
+  margin-top: 16px;
 }
 
 .rating{
@@ -700,7 +704,7 @@ input{
     margin-top: 33px;
   }
   .lup{
-    margin-right: 20px;
+    margin-right: 60px;
   }
   .main_page {
     margin: 0px 83px;
@@ -937,4 +941,7 @@ input{
     .reserved{
       margin-top: 50px;
     }
+    .lup{
+    margin-right: 30px;
+  }
 }
