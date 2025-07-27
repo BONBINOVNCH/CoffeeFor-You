@@ -65,7 +65,7 @@
 }
 
 @media (max-width: 560px) {
-    lupa_form {
+    .lupa_form {
        margin-right: 28px; 
     }
     .lupa_block {
