@@ -21,3 +21,14 @@ for (let i = 0; i < prise.length; i++) {
         news.classList.add("active")
     })
 }
+
+// ---------
+
+const input = document.querySelector(".lupa_input")
+const form = document.querySelector(".lupa_form")
+
+const url = new URL(window.location.href).origin
+
+form.addEventListener("submit", () => {
+    form.setAttribute("action", url + `/#${input.value}`)
+})
