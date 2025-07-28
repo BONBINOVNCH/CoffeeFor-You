@@ -7,7 +7,12 @@ input {outline:none;}
 
 .header{
   margin-top: 33px;
-  
+}
+
+
+
+.fifth_page .prise {
+  cursor: pointer;
 }
 
 .header_blocks {
@@ -749,7 +754,9 @@ input{
   }
 }
 
-
+.additional_button{
+  cursor: pointer;
+}
 
 
 @media (max-width: 887px){
@@ -944,4 +951,17 @@ input{
     .lup{
     margin-right: 30px;
   }
+}
+
+.third_page_foto {
+  height: 76px;
+  width: 76px;
+}
+
+.letter_button {
+  background-color: #1c1a1a00;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }

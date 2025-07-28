@@ -23,19 +23,20 @@
     <link rel="stylesheet" href="./styles/burger.css">
     <link rel="stylesheet" href="./styles/lupa.css">
     <link rel="stylesheet" href="./styles/news.css">
+    <link rel="stylesheet" href="./styles/fuctional.css">
     <title>CoffeeFor You</title>
   </head>
   <body>
 
-       <header class="header">
+       <header id="header" class="header">
         <div class="header_blocks">
 
 
             <div class="left_block header_block">
-              <div class="head_item">Home</div>
-              <div class="head_item">About</div>
-              <div class="head_item">Manu</div>
-              <div class="head_item">Reservation</div>
+              <div class="head_item"><a href="#home">Home</a></div>
+              <div class="head_item"><a href="#about">About</a></div>
+              <div class="head_item"><a href="#manu">Manu</a></div>
+              <div class="head_item"><a href="#reservation">Reservation</a></div>
             </div>
 
             <div class="midlle_block header_block">
@@ -45,16 +46,16 @@
 
           <div class="right_side_block">
             <div class="right_block header_block">
-              <div class="head_item">Page</div>
-              <div class="head_item">Shop</div>
-              <div class="head_item">Contact</div>
+              <div class="head_item"><a href="#page">Page</a></div>
+              <div class="head_item"><a href="#shop">Shop</a></div>
+              <div class="head_item"><a href="#contact">Contact</a></div>
             </div>
 
             <div class="search_block header_block">
 
               <div class="lupa_block">
-                <form class="lupa_form" action="">
-                  <input class="lupa_input" type="search">
+                <form class="lupa_form" action="" >
+                  <input value="" class="lupa_input" type="search">
                   <img src="./img/Лупа.png" class="fa fa-search">
                 </form>
               </div>
@@ -73,18 +74,18 @@
         <nav class="burger_menu">
 
           <ul class="burger_list">
-            <li class="option">Home</li>
-            <li class="option">About</li>
-            <li class="option">Manu</li>
-            <li class="option">Reservation</li>
-            <li class="option">Page</li>
-            <li class="option">Shop</li>
-            <li class="option">Contact</li>
+            <li class="option"><a href="#home">Home</a></li>
+            <li class="option"><a href="#about">About</a></li>
+            <li class="option"><a href="#manu">Manu</a></li>
+            <li class="option"><a href="#reservation">Reservation</a></li>
+            <li class="option"><a href="#page">Page</a></li>
+            <li class="option"><a href="#shop">Shop</a></li>
+            <li class="option"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header> 
 
-       <div class="main_page">
+       <div id="home" class="main_page">
 
         <div class="main_left">
           <h1 class="main_title">ONE OF THE BEST COFFEE <br> HOUSE IN YOUR HOME TOWN</h1>
@@ -94,8 +95,8 @@
           </p>
 
           <div class="buttons_block">
-            <button class="black">Explore More</button>
-            <button class="white">Read More</button>
+            <button class="black"><a href="#about">Explore More</a></button>
+            <button class="white"><a href="#page">Read More</a></button>
           </div>
         </div>
 
@@ -141,7 +142,7 @@
 
         </div>
 
-    <div class="zero_page">
+    <div id="about" class="zero_page">
       <div class="zero_page_text">
         <div class="zero_page_text_header">Roasted CoffeeFor You</div>
         <div class="zero_page_text_normalText">
@@ -150,12 +151,12 @@
           Aliquam erat volutpat.
         </div>
       </div>
-      <button class="zero_page_button">Explore More</button>
+      <button class="zero_page_button black"><a href="#product">Explore More</a></button>
     </div>
 
 
 
-    <div class="popular_product">
+    <div id="product" class="popular_product">
       <button class="black popular_button">Popular product</button>
       <h1 class="title_product">Cafena Popular Product</h1>
 
@@ -213,7 +214,7 @@
 
 
 
-    <div class="first_page">
+    <div id="shop" class="first_page">
       <div class="first_page_left">
         <h1 class="header1">COFFEE MACHINE,BUY FOR HOME</h1>
         <div class="first_page_text">
@@ -227,7 +228,7 @@
             vestibulum id tellus mmodo mattis.
           </p>
         </div>
-        <button class="buttonDiscover">Discover Now</button>
+        <button class="buttonDiscover black"><a href="#manu">Discover Now</a></button>
       </div>
       <div class="first_page_right">
         <img class="coffe_machine" src="img/Group 12.png" alt="efefef" />
@@ -236,7 +237,7 @@
 
 
 
-    <div class="second_page">
+    <div id="manu" class="second_page">
       <div class="header_div">
         <h1 class="header2">Cafena Best Product</h1>
         <button class="header_div_button">Cafena Best Product</button>
@@ -321,7 +322,7 @@
 
 
 
-    <div class="fourth_page">
+    <div id="reservation" class="fourth_page">
       <img
         src="img\west-end-london-map-with-pin 1.png"
         alt=""
@@ -330,25 +331,30 @@
       <div class="fourth_page_block">
         <div class="fourth_page_block_title">RESERVATION</div>
         <div class="fourth_page_block_header">BOOKING A TABLE</div>
+
+        <form action="https://formspree.io/f/xvgqradn" method="POST">
         <div class="fourth_page_block_input">
-          <div class="block_input_text">4 Person</div>
+          <input name="count" type="text" placeholder="4 Person" class="block_input_text"></input>
           <img src="img/Vector.png" alt="" class="block_input_img" />
         </div>
         <div class="fourth_page_block_input">
-          <div class="block_input_text">4 Person</div>
+          <input type="text" name="date" placeholder="12/06/2022" class="block_input_text"></input>
           <img src="img/Group3.png" alt="" class="block_input_img" />
         </div>
         <div class="fourth_page_block_input">
-          <div class="block_input_text">4 Person</div>
+          <input type="email" name="email" placeholder="Email" class="block_input_text"></input>
           <img src="img/Vector2.png" alt="" class="block_input_img" />
         </div>
-        <button class="fourth_page_block_button">BOOK A TABLE</button>
+
+        <button type="submit" class="fourth_page_block_button black">BOOK A TABLE</button>
+        </form>
+        
       </div>
     </div>
 
         
 
-    <div class="fifth_page">
+    <div id="page" class="fifth_page">
       <button class="fifth_page_button">FROM OUR BLOG</button>
       <div class="fifth_page_header">OUR NEWS & ARTICLES</div>
       <div class="cards">
@@ -396,10 +402,11 @@
 
     
 
-    <footer class="footer">
+    <footer id="contact" class="footer">
 
       <div class="go_to_top_block">
-        <img class="top_arrow" src="./img/Стрілка.png" alt="">
+        <a href="#header"><img class="top_arrow" src="./img/Стрілка.png" alt=""></a>
+
         <p class="top_text">GO TO TOP</p>
       </div>
 
@@ -415,10 +422,10 @@
           <p class="info_title"><span>Address: </span>30 North Wes New</p>
         </div>
 
-        <div class="info_input">
-          <input placeholder="Enter your email" type="text">
-          <img class="letter" src="./img/Letter.png" alt="">
-        </div>
+        <form action="#" class="info_input">
+          <input placeholder="Enter your email" type="email">
+          <button class="letter_button" type="submit"><img class="letter" src="./img/Letter.png" alt=""></button>
+        </form>
 
       </div>
 
