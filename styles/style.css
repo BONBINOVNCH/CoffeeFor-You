@@ -7,7 +7,12 @@ input {outline:none;}
 
 .header{
   margin-top: 33px;
-  
+}
+
+
+
+.fifth_page .prise {
+  cursor: pointer;
 }
 
 .header_blocks {

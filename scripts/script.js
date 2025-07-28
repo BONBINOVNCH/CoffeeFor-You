@@ -8,7 +8,7 @@ burger.addEventListener("click", (event) => {
 
 //---------
 
-const prise = document.querySelectorAll(".prise, .arrow")
+const prise = document.querySelectorAll(".fifth_page .prise, .arrow")
 const news = document.querySelector(".news")
 const cross = document.querySelector(".cross")
 
@@ -32,3 +32,6 @@ const url = new URL(window.location.href).origin
 form.addEventListener("submit", () => {
     form.setAttribute("action", url + `/#${input.value.toLowerCase()}`)
 })
+
+// ---------
+

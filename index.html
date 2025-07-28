@@ -95,8 +95,8 @@
           </p>
 
           <div class="buttons_block">
-            <button class="black">Explore More</button>
-            <button class="white">Read More</button>
+            <button class="black"><a href="#about">Explore More</a></button>
+            <button class="white"><a href="#page">Read More</a></button>
           </div>
         </div>
 
@@ -151,12 +151,12 @@
           Aliquam erat volutpat.
         </div>
       </div>
-      <button class="zero_page_button">Explore More</button>
+      <button class="zero_page_button black"><a href="#product">Explore More</a></button>
     </div>
 
 
 
-    <div class="popular_product">
+    <div id="product" class="popular_product">
       <button class="black popular_button">Popular product</button>
       <h1 class="title_product">Cafena Popular Product</h1>
 
@@ -228,7 +228,7 @@
             vestibulum id tellus mmodo mattis.
           </p>
         </div>
-        <button class="buttonDiscover">Discover Now</button>
+        <button class="buttonDiscover black"><a href="#manu">Discover Now</a></button>
       </div>
       <div class="first_page_right">
         <img class="coffe_machine" src="img/Group 12.png" alt="efefef" />
@@ -331,19 +331,22 @@
       <div class="fourth_page_block">
         <div class="fourth_page_block_title">RESERVATION</div>
         <div class="fourth_page_block_header">BOOKING A TABLE</div>
+        <form action="#">
         <div class="fourth_page_block_input">
-          <div class="block_input_text">4 Person</div>
+          <input placeholder="4 Person" class="block_input_text"></input>
           <img src="img/Vector.png" alt="" class="block_input_img" />
         </div>
         <div class="fourth_page_block_input">
-          <div class="block_input_text">4 Person</div>
+          <input placeholder="12/06/2022" class="block_input_text"></input>
           <img src="img/Group3.png" alt="" class="block_input_img" />
         </div>
         <div class="fourth_page_block_input">
-          <div class="block_input_text">4 Person</div>
+          <input placeholder="Email" class="block_input_text"></input>
           <img src="img/Vector2.png" alt="" class="block_input_img" />
         </div>
-        <button class="fourth_page_block_button">BOOK A TABLE</button>
+        </form>
+
+        <button type="submit" class="fourth_page_block_button black">BOOK A TABLE</button>
       </div>
     </div>
 
@@ -400,7 +403,8 @@
     <footer id="contact" class="footer">
 
       <div class="go_to_top_block">
-        <img class="top_arrow" src="./img/Стрілка.png" alt="">
+        <a href="#home"><img class="top_arrow" src="./img/Стрілка.png" alt=""></a>
+
         <p class="top_text">GO TO TOP</p>
       </div>
 
