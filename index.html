@@ -331,22 +331,24 @@
       <div class="fourth_page_block">
         <div class="fourth_page_block_title">RESERVATION</div>
         <div class="fourth_page_block_header">BOOKING A TABLE</div>
-        <form action="#">
+
+        <form action="https://formspree.io/f/xvgqradn" method="POST">
         <div class="fourth_page_block_input">
-          <input placeholder="4 Person" class="block_input_text"></input>
+          <input name="count" type="text" placeholder="4 Person" class="block_input_text"></input>
           <img src="img/Vector.png" alt="" class="block_input_img" />
         </div>
         <div class="fourth_page_block_input">
-          <input placeholder="12/06/2022" class="block_input_text"></input>
+          <input type="text" name="date" placeholder="12/06/2022" class="block_input_text"></input>
           <img src="img/Group3.png" alt="" class="block_input_img" />
         </div>
         <div class="fourth_page_block_input">
-          <input placeholder="Email" class="block_input_text"></input>
+          <input type="email" name="email" placeholder="Email" class="block_input_text"></input>
           <img src="img/Vector2.png" alt="" class="block_input_img" />
         </div>
-        </form>
 
         <button type="submit" class="fourth_page_block_button black">BOOK A TABLE</button>
+        </form>
+        
       </div>
     </div>
 
