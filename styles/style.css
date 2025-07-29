@@ -9,8 +9,6 @@ input {outline:none;}
   margin-top: 33px;
 }
 
-
-
 .fifth_page .prise {
   cursor: pointer;
 }
@@ -965,3 +963,12 @@ input{
   padding: 0;
   cursor: pointer;
 }
+
+.zero_page_button{
+  padding: 0px;
+}
+
+.buttonDiscover{
+  padding: 0px;
+}
+
