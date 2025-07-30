@@ -67,9 +67,19 @@ arrowLeft.addEventListener("click", () => {
     if (i < 0) {
         i = users.length - 1
     } 
+    blockText.style.animation = "slide-left-out 0.3s ease-in"
+    userImg.style.animation = "slide-left-out 0.3s ease-in"
+    userName.style.animation = "slide-left-out 0.3s ease-in"
+
+    setTimeout(() => {
     blockText.textContent = users[i].text
     userImg.setAttribute("src", users[i].img)
     userName.textContent = users[i].name
+    blockText.style.animation = "slide-left-in 0.3s ease-in"
+    userImg.style.animation = "slide-left-in 0.3s ease-in"
+    userName.style.animation = "slide-left-in 0.3s ease-in"
+    }, 300)
+
 })
 
 arrowRight.addEventListener("click", () => {
@@ -77,7 +87,16 @@ arrowRight.addEventListener("click", () => {
     if (i > users.length - 1) {
         i = 0
     } 
+    blockText.style.animation = "slide-right-out 0.3s ease-in"
+    userImg.style.animation = "slide-right-out 0.3s ease-in"
+    userName.style.animation = "slide-right-out 0.3s ease-in"
+
+    setTimeout(() => {
     blockText.textContent = users[i].text
     userImg.setAttribute("src", users[i].img)
     userName.textContent = users[i].name
+    blockText.style.animation = "slide-right-in 0.3s ease-in"
+    userImg.style.animation = "slide-right-in 0.3s ease-in"
+    userName.style.animation = "slide-right-in 0.3s ease-in"
+    }, 300)
 })
