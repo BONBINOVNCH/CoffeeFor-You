@@ -54,7 +54,20 @@
   }
 }
 
-.header a, .white a{
+@keyframes shake {
+  30% {
+    transform: rotate(20deg);
+  }
+
+    60% {
+    transform: rotate(-20deg);
+  }
+    100% {
+    transform: rotate(0deg);
+  }
+}
+
+.header a, .white a, .fifth_page .prise{
     transition: all 0.3s ease; 
     position: relative;
     text-decoration: none;
@@ -66,7 +79,7 @@
 }
 
 
-.header a::after, .white a::after {
+.header a::after, .white a::after, .fifth_page .prise::after {
 content: '';
   position: absolute;
   bottom: 0;
@@ -77,7 +90,7 @@ content: '';
   transition: width 0.3s ease-in-out; 
 }
 
-.header a:hover::after, .white:hover a::after {
+.header a:hover::after, .white:hover a::after, .fifth_page .prise:hover::after {
   width: 100%; 
 }
 
@@ -97,7 +110,7 @@ content: '';
     transition: all 0.1s ease; 
 }
 
-.white a:active, .white:active{
+.white a:active, .white:active, .fifth_page .prise:active, .additional_button:active{
     background-color: #EAB665;
     color: white;
     transition: all 0.1s ease; 
@@ -118,7 +131,20 @@ content: '';
     background-color: #EAB665;
 }
 
-.third_page_textImg_text{
-    
-    /* animation: slide-in 1s ease-in; */
+.arrow:hover{
+  animation: shake 0.3s linear;
+}
+
+.top_arrow:hover, .letter:hover {
+  transform: scale(1.14);
+  transition: all 0.3s ease; 
+}
+
+.top_arrow:active, .letter:active {
+  animation: shake 0.3s linear;
+}
+
+.additional_button:hover {
+  border:#EAB665 1px solid;
+  transition: all 0.3s ease; 
 }
