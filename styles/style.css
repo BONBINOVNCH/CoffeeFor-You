@@ -1,7 +1,12 @@
+html{
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: Open Sans;
   background-color: #f6f2ee;
+  overflow-x: hidden;
 }
 input {outline:none;}
 
