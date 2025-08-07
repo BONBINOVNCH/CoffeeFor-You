@@ -1,4 +1,3 @@
-# fakestore
-A team project of the Creator IT Academy students, an online store using Fake Store API
+# CoffeFor-You
+Project to summer for training skills and practicing gained knowleg. 
 
-![screen of main page](./src/img/readme/mainPage.png)
