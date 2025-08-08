@@ -13,6 +13,10 @@ app.get("/popularProduct", (req, res) => {
     res.sendFile(path.join(__dirname, "pages", "popularProduct.html"));
 });
 
+app.get("/customer", (req, res) => {
+    res.sendFile(path.join(__dirname, "pages", "customer.html"));
+});
+
 app.use(express.static(__dirname + "/public"));
 
 
