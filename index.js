@@ -17,6 +17,18 @@ app.get("/customer", (req, res) => {
     res.sendFile(path.join(__dirname, "pages", "customer.html"));
 });
 
+app.get("/blog", (req, res) => {
+    res.sendFile(path.join(__dirname, "pages", "blog.html"));
+});
+
+app.get("/bestProduct", (req, res) => {
+    res.sendFile(path.join(__dirname, "pages", "bestProduct.html"));
+});
+
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, "pages", "about.html"));
+});
+
 app.use(express.static(__dirname + "/public"));
 
 

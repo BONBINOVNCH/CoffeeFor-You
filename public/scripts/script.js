@@ -30,7 +30,7 @@ const form = document.querySelector(".lupa_form")
 const url = new URL(window.location.href).origin
 
 form.addEventListener("submit", () => {
-    form.setAttribute("action", url + `/#${input.value.toLowerCase()}`)
+    form.setAttribute("action", url + `/${input.value.toLowerCase()}`)
 })
 
 // ---------
