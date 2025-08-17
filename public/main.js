@@ -2,7 +2,7 @@
 
  $(document).ready(function() {
             $('.info_input').on('submit', function(e) {
-                e.preventDefault()
+
                 const email = {
                     email: $("#email").val()
                 }
