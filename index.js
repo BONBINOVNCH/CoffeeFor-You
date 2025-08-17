@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/", (req, res) => {
     const { email } = req.body
     const date =  new Date().toISOString().split('T')[0]
-    const data = `емел: ${email}, Дата: ${date} \n`
+    const data = `${email}, ${date} \n`
         fs.appendFile('leads.txt', data, (err) => {
         if (err) throw err;
         res.send('Користувача зареєстровано та дані збережено.');
@@ -54,6 +54,38 @@ app.get("/about", (req, res) => {
 });
 
 
+//----------------------
+
+app.get("/lead", (req, res) => {
+    fs.readFile('leads.txt', 'utf8', (err, data) => {
+        const array = data
+            .split("\n")
+            .filter(line => line != "")
+            .map((line, index) => {
+                return `<li><span class="index">${index + 1}</span> <span class="email">${line.split(",")[0]}</span><span class="date">${line.split(",")[1]}</span></li>`
+            })
+            .join("")
+
+        res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" href="./styles/lead.css" />
+
+            <title>Document</title>
+        </head>
+        <body>
+            <h2>Список всіх підписників</h2>
+            ${array}
+        </body>
+    </html>
+            `)
+
+});
+})
 
 
 app.listen(port, () => {
