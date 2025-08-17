@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -169,8 +173,8 @@
           <p class="info_title"><span>Address: </span>30 North Wes New</p>
         </div>
 
-        <form data-aos="zoom-in" action="#" class="info_input">
-          <input placeholder="Enter your email" type="email">
+        <form data-aos="zoom-in" class="info_input">
+          <input name="email" id="email" placeholder="Enter your email" type="email">
           <button class="letter_button" type="submit"><img class="letter" src="./img/Letter.png" alt=""></button>
         </form>
 
@@ -218,6 +222,7 @@
       AOS.init();
     </script>
 
-    <script src="./scripts/script.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="main.js"></script>
   </body>
 </html>
