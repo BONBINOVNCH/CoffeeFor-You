@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/", (req, res) => {
     const { email } = req.body
     const date =  new Date().toISOString().split('T')[0]
-    const data = `емел: ${email}, Дата: ${date}`
+    const data = `емел: ${email}, Дата: ${date} \n`
         fs.appendFile('leads.txt', data, (err) => {
         if (err) throw err;
         res.send('Користувача зареєстровано та дані збережено.');
