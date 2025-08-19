@@ -22,6 +22,19 @@ app.post("/", (req, res) => {
 
 })
 
+app.post("/administration", (req, res) => {
+    const { email } = req.body
+    res.send(email)
+
+    fs.readFile('leads.txt', 'utf8', (err, data) => {
+        data
+            .split("\n")
+            .filter(line => line != "")
+            .map((line, index) => {
+                
+            })
+    })
+})
 
 //=========
 
@@ -53,6 +66,9 @@ app.get("/about", (req, res) => {
     res.sendFile(path.join(__dirname, "pages", "about.html"));
 });
 
+app.get("/administration", (req, res) => {
+    res.sendFile(path.join(__dirname, "pages", "administration.html"));
+});
 
 //----------------------
 
