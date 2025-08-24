@@ -2,7 +2,9 @@ const express = require('express')
 const path = require("path")
 const app = express()
 const fs = require("fs")
-const port = 3000
+require("dotenv").config()
+const nodemailer = require("nodemailer")
+const port = process.env.port
 
 app.use(express.static(__dirname + "/public"));
 
@@ -22,6 +24,16 @@ app.post("/", (req, res) => {
 
 })
 
+
+
+    let transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: process.env.GMAIL_EMAIL,
+            pass: process.env.GMAIL_PASS
+        }
+})
+
 app.post("/administration", (req, res) => {
     const { email } = req.body
     res.send(email)
@@ -31,8 +43,22 @@ app.post("/administration", (req, res) => {
             .split("\n")
             .filter(line => line != "")
             .map((line, index) => {
-                
-            })
+
+                let mailOptions = {
+                    from: process.env.GMAIL_EMAIL,
+                    to: line,
+                    subject: "Тестовий лист",
+                    text: `fefefefefefefe`,
+
+}
+
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            return console.log(err)
+        }
+        console.log("Лист успішно відправлено", info.response)
+    })
+        })
     })
 })
 
