@@ -2,9 +2,16 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs");
+const bodyParser = require("body-parser");
+const TelegramBot = require("node-telegram-bot-api");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const port = process.env.port;
+
+const Telegram_bot_api = process.env.BOT_KEY;
+const bot = new TelegramBot(Telegram_bot_api, { polling: true });
+
+app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/public"));
 
@@ -32,6 +39,19 @@ app.post("/about", (req, res) => {
     });
 });
 
+let chatIDAdmin = undefined;
+
+bot.on("message", (msg) => {
+    console.log(msg);
+    chatIDAdmin = msg.chat.id;
+});
+
+app.post("/popularProduct", (req, res) => {
+    const { product, email, name, number, adress } = req.body;
+    const text = `Шановний адміністратор, з'явилось нове замовленя! \n Продукт: ${product}\n Кількість: ${number}\n Ім'я замовника: ${name}\n Емейл замовника: ${email}\n Адресс замовника: ${adress}`;
+    bot.sendMessage(chatIDAdmin, text);
+});
+
 app.post("/bestProduct", (req, res) => {
     const { email } = req.body;
     const date = new Date().toISOString().split("T")[0];
@@ -52,6 +72,7 @@ let transporter = nodemailer.createTransport({
 
 app.post("/administration", (req, res) => {
     const { email } = req.body;
+
     res.send(email);
 
     fs.readFile("leads.txt", "utf8", (err, data) => {
