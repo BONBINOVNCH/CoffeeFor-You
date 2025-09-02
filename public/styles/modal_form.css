@@ -6,8 +6,15 @@
     background-color: rgb(224, 223, 220);
     width: 30%;
     border-radius: 15px;
+    pointer-events: none;
+     opacity: 0;
+     transition: opacity 0.4s ease;
 }
-
+.modal_window.active {
+    pointer-events: all;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
 .modal_form {
     transition: 3s ease;
     width: 100%;
@@ -26,10 +33,20 @@
 
 .selected_product {
     margin: 0;
+    color: black;
 }
 .modal_block {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 5px;
+}
+
+.product_description{
+    cursor: pointer;
+}
+
+.product_description:hover {
+    transition:  0.2s;
+    color: goldenrod;
 }

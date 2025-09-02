@@ -107,8 +107,8 @@ const modal_window = document.querySelector(".modal_window");
 for (let i = 0; i < product_modal.length; i++) {
     product_modal[i].addEventListener("click", () => {
         selected_product.innerHTML = product_modal[i].textContent;
-        modal_window.style.opacity = "100%";
-        modal_window.style.display = "block";
         
+        modal_window.style.display = "block";
+        modal_window.classList.add("active")
     });
 }
