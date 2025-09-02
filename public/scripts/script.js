@@ -99,3 +99,16 @@ arrowRight?.addEventListener("click", () => {
         userName.style.animation = "slide-right-in 0.3s ease-in";
     }, 300);
 });
+
+const product_modal = document.querySelectorAll(".product_description");
+const selected_product = document.querySelector(".selected_product");
+const modal_window = document.querySelector(".modal_window");
+
+for (let i = 0; i < product_modal.length; i++) {
+    product_modal[i].addEventListener("click", () => {
+        selected_product.innerHTML = product_modal[i].textContent;
+        modal_window.style.opacity = "100%";
+        modal_window.style.display = "block";
+        
+    });
+}

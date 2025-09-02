@@ -22,6 +22,7 @@ $(document).ready(function () {
     });
 
     $(".submiter").on("click", function (e) {
+        e.preventDefault();
         const submitter = $(".submiter");
         console.log(submitter["0"]);
         const formData = new FormData($(".modal_form")["0"], submitter["0"]);

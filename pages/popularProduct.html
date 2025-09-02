@@ -38,6 +38,7 @@
         <link rel="stylesheet" href="./styles/news.css" />
         <link rel="stylesheet" href="./styles/fuctional.css" />
         <link rel="stylesheet" href="./styles/animation.css" />
+        <link rel="stylesheet" href="./styles/modal_form.css" />
 
         <link rel="icon" type="image/ico" href="./img/coff.png" />
         <title>CoffeeFor You</title>
@@ -138,9 +139,7 @@
                             src="./img/product.png"
                             alt=""
                         />
-                        <p class="product_description">
-                            Vicaragua Coffee Beans
-                        </p>
+                        <p class="product_description">Vicaragua Coffee Beans</p>
                         <div class="product_number">$29</div>
                     </div>
 
@@ -150,9 +149,7 @@
                             src="./img/product.png"
                             alt=""
                         />
-                        <p class="product_description">
-                            <a href="#">Vicaragua Coffee Beans</a>
-                        </p>
+                        <p class="product_description">Vicaragua Coffee Beans</p>
                         <div class="product_number">$29</div>
                     </div>
                 </div>
@@ -317,7 +314,11 @@
 
         <div class="modal_window">
             <form method="post" class="modal_form">
-                <h4 class="selected_product">fefefefe</h4>
+                <div class="modal_block">
+                    <h4 class="selected_product">fefefefe</h4>
+                    <img src="./img/cross.png" class="cross1 cross" alt="">
+                </div>
+                
                 <input placeholder="number" name="number" id="modal_number" />
                 <input
                     type="text"
@@ -337,16 +338,18 @@
                     name="adress"
                     id="modal_adress"
                 />
-                <button
+                <button 
                     value="submiter"
                     name="submit"
                     type="submit"
-                    class="submiter"
+                    class="submiter button black"
                 >
                     submit
                 </button>
             </form>
+            
         </div>
+    
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
@@ -355,5 +358,6 @@
 
         <script src="main.js"></script>
         <script src="./scripts/script.js"></script>
+        <script src="./scripts/modal.js"></script>
     </body>
 </html>
