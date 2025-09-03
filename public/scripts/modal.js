@@ -4,5 +4,4 @@ const modal = document.querySelector(".modal_window")
 cross1.addEventListener("click", () => {
     
     modal.classList.remove("active")
-    modal.style.display = "none"
 })
