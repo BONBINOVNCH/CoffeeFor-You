@@ -71,9 +71,9 @@ let transporter = nodemailer.createTransport({
 });
 
 app.post("/administration", (req, res) => {
-    const { email } = req.body;
+    const { message_text } = req.body;
 
-    res.send(email);
+    res.send(message_text);
 
     fs.readFile("leads.txt", "utf8", (err, data) => {
         data.split("\n")
@@ -91,6 +91,10 @@ app.post("/administration", (req, res) => {
                         return console.log(err);
                     }
                     console.log("Лист успішно відправлено", info.response);
+
+                    const text = `Любий кліенте, до вас прийшло повідомлення від Coffe-for-you \n <b>${mailOptions.subject}</b> \n ${message_text}`;
+
+                    bot.sendMessage(chatIDAdmin, text, { parse_mode: "HTML" });
                 });
             });
     });
