@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -42,10 +41,10 @@
 
 
             <div class="left_block header_block">
-              <div class="head_item"><a class="active" href="/">Home</a></div>
+              <div class="head_item"><a href="/">Home</a></div>
               <div class="head_item"><a href="/about">About</a></div>
               <div class="head_item"><a href="/popularProduct">popularProduct</a></div>
-              <div class="head_item"><a href="/customer">customer</a></div>
+              <div class="head_item"><a class="active" href="/customer">customer</a></div>
             </div>
 
             <div class="midlle_block header_block">
@@ -56,7 +55,7 @@
           <div class="right_side_block">
             <div class="right_block header_block">
               <div class="head_item"><a href="/blog">blog</a></div>
-              <div class="head_item"><a href="/bestProduct">bestProduct</a></div>
+              <div class="head_item"><a href="bestProduct">bestProduct</a></div>
               <div class="head_item"><a href="#contact">Contact</a></div>
             </div>
 
@@ -83,10 +82,10 @@
         <nav class="burger_menu">
 
           <ul class="burger_list">
-            <li class="option"><a class="active" href="/">Home</a></li>
+            <li class="option"><a href="/">Home</a></li>
             <li class="option"><a href="/about">About</a></li>
             <li class="option"><a href="/popularProduct">popularProduct</a></li>
-            <li class="option"><a href="/customer">customer</a></li>
+            <li class="option"><a class="active" href="/customer">customer</a></li>
             <li class="option"><a href="/blog">blog</a></li>
             <li class="option"><a href="/bestProduct">bestProduct</a></li>
             <li class="option"><a href="#contact">Contact</a></li>
@@ -94,62 +93,61 @@
         </nav>
       </header> 
 
-       <div id="home" class="main_page">
-
-        <div data-aos="fade-right" data-aos-duration="1000" class="main_left">
-          <h1 class="main_title">ONE OF THE BEST COFFEE <br> HOUSE IN YOUR HOME TOWN</h1>
-          <p class="main_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit <br> do eiusmod veniam, quis nostrud exercitation <br>
-            laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-
-          <div class="buttons_block">
-            <button class="black"><a href="#about">Explore More</a></button>
-            <button class="white"><a href="#page">Read More</a></button>
-          </div>
-        </div>
-
-        <div data-aos="fade-left" data-aos-duration="1000" class="main_rigth">
-          <img class="heart" src="./img/heart.png" alt="" srcset="">
-        </div>
 
 
 
+ <div data-aos="zoom-in" data-aos-duration="1000" class="third_page">
+      <div class="third_page_header">OUR CUSTOMER REVIEW</div>
+      <div class="third_page_textImg">
+        <img class="leftArrow" src="img\Group2.png" alt="" />
+        <p class="third_page_textImg_text">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem opposed to using 'Content here, content here..
+        </p>
+        <img class="rightArrow" src="img\Group.png" alt="" />
       </div>
+      <img
+        src="img\ben-parker-OhKElOkQ3RE-unsplash 1.png"
+        alt=""
+        class="third_page_foto"
+      />
+      <div class="third_page_name">Rasalida Williamson</div>
+    </div>
 
-        <div class="add">
 
-          <div data-aos="flip-down" class="add_block">
-            <div class="sub_add_block michalka0">
-              <div class="add_hight_text">
-                <p class="hight_text_number">01</p>
-                <p class="hight_text">Best Coffee Flavor</p>
-              </div>
-              <p class="add_bottom_text">Curabitur semper erat a lacusey sedny <br> consequat,sit ametey.</p>
-            </div>
-          </div>
 
-          <div data-aos="flip-down" class="add_block">
-            <div class="sub_add_block michalka">
-              <div class="add_hight_text">
-                <p class="hight_text_number">02</p>
-                <p class="hight_text">Best Coffee Flavor</p>
-              </div>
-              <p class="add_bottom_text">Curabitur semper erat a lacusey sedny <br> consequat,sit ametey.</p>
-            </div>
-          </div>
+    <div id="reservation" class="fourth_page">
+      <img
+      data-aos="zoom-in-right" data-aos-duration="1000"
+        src="img\west-end-london-map-with-pin 1.png"
+        alt=""
+        class="fourth_page_map"
+      />
+      <div data-aos="zoom-in-left" data-aos-duration="1000" class="fourth_page_block">
+        <div class="fourth_page_block_title">RESERVATION</div>
+        <div class="fourth_page_block_header">BOOKING A TABLE</div>
 
-          <div data-aos="flip-down" class="add_block">
-            <div class="sub_add_block michalka2">
-              <div class="add_hight_text">
-                <p class="hight_text_number">03</p>
-                <p class="hight_text">Best Coffee Flavor</p>
-              </div>
-              <p class="add_bottom_text">Curabitur semper erat a lacusey sedny <br> consequat,sit ametey.</p>
-            </div>
-          </div>
-
+        <form action="https://formspree.io/f/xvgqradn" method="POST">
+        <div class="fourth_page_block_input">
+          <input name="count" type="text" placeholder="4 Person" class="block_input_text"></input>
+          <img src="img/Vector.png" alt="" class="block_input_img" />
         </div>
+        <div class="fourth_page_block_input">
+          <input type="text" name="date" placeholder="12/06/2022" class="block_input_text"></input>
+          <img src="img/Group3.png" alt="" class="block_input_img" />
+        </div>
+        <div class="fourth_page_block_input">
+          <input type="email" name="email" placeholder="Email" class="block_input_text"></input>
+          <img src="img/Vector2.png" alt="" class="block_input_img" />
+        </div>
+
+        <button type="submit" class="fourth_page_block_button black">BOOK A TABLE</button>
+        </form>
+        
+      </div>
+    </div>
+
 
     
 
@@ -173,8 +171,13 @@
           <p class="info_title"><span>Address: </span>30 North Wes New</p>
         </div>
 
-        <form data-aos="zoom-in" action="/lead" class="info_input">
-          <input name="email" id="email" placeholder="Enter your email" type="email">
+      <form data-aos="zoom-in" action="/lead" class="info_input">
+                    <input
+                        name="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        type="email"
+                    />
           <button class="letter_button" type="submit"><img class="letter" src="./img/Letter.png" alt=""></button>
         </form>
 
@@ -222,7 +225,7 @@
       AOS.init();
     </script>
 
-    <!-- <script src="./scripts/script.js"></script> -->
-    <script src="main.js"></script>
+<script src="main.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

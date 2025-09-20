@@ -77,6 +77,14 @@
     color: #EAB665;
     transition: all 0.3s ease; 
 }
+.active{
+  color: #EAB665;
+}
+
+.header a.active:after{
+
+  width: 100%; 
+}
 
 
 .header a::after, .white a::after, .fifth_page .prise::after {
