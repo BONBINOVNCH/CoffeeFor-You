@@ -62,6 +62,15 @@ app.post("/bestProduct", (req, res) => {
     });
 });
 
+app.post("/customer", (req, res) => {
+    const rateInfo = req.body;
+    console.log(rateInfo);
+    const data = `${rateInfo.nickname}, ${rateInfo.text}, ${rateInfo.img} \n`;
+    fs.appendFile("rating.txt", data, (err) => {
+        if (err) throw err;
+    });
+});
+
 let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -112,6 +121,24 @@ app.get("/home", (req, res) => {
 
 app.get("/popularProduct", (req, res) => {
     res.sendFile(path.join(__dirname, "pages", "popularProduct.html"));
+});
+
+app.get("/api/customer", (req, res) => {
+    fs.readFile("rating.txt", "utf8", (err, data) => {
+        const users = data
+            .split("\n")
+            .filter((line) => line != "")
+            .map((user) => {
+                let userArr = user.split(", ");
+
+                return {
+                    name: userArr[0],
+                    text: userArr[1],
+                    img: userArr[2],
+                };
+            });
+        res.json(users);
+    });
 });
 
 app.get("/customer", (req, res) => {
