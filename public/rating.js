@@ -6,6 +6,7 @@ $(document).ready(function () {
             nickname: $("#nickname").val(),
             text: $("#text").val(),
             img: $("#img").val(),
+            stars: $("input[type='radio'][name='star-radio']:checked").val(),
         };
         console.log(rating);
 

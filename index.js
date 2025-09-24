@@ -65,7 +65,7 @@ app.post("/bestProduct", (req, res) => {
 app.post("/customer", (req, res) => {
     const rateInfo = req.body;
     console.log(rateInfo);
-    const data = `${rateInfo.nickname}, ${rateInfo.text}, ${rateInfo.img} \n`;
+    const data = `${rateInfo.nickname}, ${rateInfo.text}, ${rateInfo.img}, ${rateInfo.stars}\n`;
     fs.appendFile("rating.txt", data, (err) => {
         if (err) throw err;
     });
@@ -135,6 +135,7 @@ app.get("/api/customer", (req, res) => {
                     name: userArr[0],
                     text: userArr[1],
                     img: userArr[2],
+                    stars: userArr[3],
                 };
             });
         res.json(users);

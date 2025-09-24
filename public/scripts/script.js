@@ -64,6 +64,7 @@ const arrowLeft = document.querySelector(".leftArrow");
 const blockText = document.querySelector(".third_page_textImg_text");
 const userImg = document.querySelector(".third_page_foto");
 const userName = document.querySelector(".third_page_name");
+const images_block = document.querySelector(".images_block");
 
 let i = 0;
 
@@ -71,6 +72,15 @@ arrowLeft?.addEventListener("click", async () => {
     await fetch("/api/customer")
         .then((res) => res.json())
         .then((users) => {
+            function mapStars(i) {
+                images_block.innerHTML = "";
+                for (let index = users[i].stars; index > 0; index--) {
+                    images_block.innerHTML =
+                        images_block.innerHTML +
+                        "<img src='img/Star.png' class='star'>";
+                }
+            }
+
             i -= 1;
             if (i < 0) {
                 i = users.length - 1;
@@ -78,14 +88,19 @@ arrowLeft?.addEventListener("click", async () => {
             blockText.style.animation = "slide-left-out 0.3s ease-in";
             userImg.style.animation = "slide-left-out 0.3s ease-in";
             userName.style.animation = "slide-left-out 0.3s ease-in";
+            images_block.style.animation = "slide-left-out 0.3s ease-in";
+
+            console.log(users[i]);
 
             setTimeout(() => {
                 blockText.textContent = users[i].text;
                 userImg.setAttribute("src", users[i].img);
                 userName.textContent = users[i].name;
+                mapStars(i);
                 blockText.style.animation = "slide-left-in 0.3s ease-in";
                 userImg.style.animation = "slide-left-in 0.3s ease-in";
                 userName.style.animation = "slide-left-in 0.3s ease-in";
+                images_block.style.animation = "slide-left-in 0.3s ease-in";
             }, 300);
         });
 });
@@ -94,6 +109,15 @@ arrowRight?.addEventListener("click", async () => {
     await fetch("/api/customer")
         .then((res) => res.json())
         .then((users) => {
+            function mapStars(i) {
+                images_block.innerHTML = "";
+                for (let index = users[i].stars; index > 0; index--) {
+                    images_block.innerHTML =
+                        images_block.innerHTML +
+                        "<img src='img/Star.png' class='star'>";
+                }
+            }
+
             i += 1;
             if (i > users.length - 1) {
                 i = 0;
@@ -101,14 +125,17 @@ arrowRight?.addEventListener("click", async () => {
             blockText.style.animation = "slide-right-out 0.3s ease-in";
             userImg.style.animation = "slide-right-out 0.3s ease-in";
             userName.style.animation = "slide-right-out 0.3s ease-in";
+            images_block.style.animation = "slide-right-out 0.3s ease-in";
 
             setTimeout(() => {
                 blockText.textContent = users[i].text;
                 userImg.setAttribute("src", users[i].img);
                 userName.textContent = users[i].name;
+                mapStars(i);
                 blockText.style.animation = "slide-right-in 0.3s ease-in";
                 userImg.style.animation = "slide-right-in 0.3s ease-in";
                 userName.style.animation = "slide-right-in 0.3s ease-in";
+                images_block.style.animation = "slide-right-in 0.3s ease-in";
             }, 300);
         });
 });

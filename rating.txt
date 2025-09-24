@@ -1,6 +1,2 @@
-vfv, deded, C:\fakepath\menu.png 
-1232312, de, C:\fakepath\harmonogram kurs polskiego 2025 v.2.pdf 
-de, de, C:\fakepath\фото Максим Залуський.jpg 
-dede, de, C:\fakepath\Oświadczenie absolwenta studiów pierwszego stopnia dotyczące zachowania ważności els.docx 
-fef, fef, C:\fakepath\Podanie o zachowaniu elektronicznej legitymacji studenckiej na studiach drugiego stopnia.docx 
-bg, bg, C:\fakepath\USOSWEB INSTRUKCJA 2025 PL.pdf 
+vfv, vfv, C:\fakepath\фото Максим Залуський.jpg, 3
+fefe, fefefe, C:\fakepath\фото Максим Залуський.jpg, 5
