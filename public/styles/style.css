@@ -911,6 +911,9 @@ input {
         margin: 0px 15px;
         margin-top: 47px;
     }
+    .fourth_page_block {
+        padding: 20px 40px;
+    }
     .fifth_page {
         margin: 0px 15px;
     }
@@ -982,6 +985,7 @@ input[type="radio"]:focus + label {
     text-align: left;
 }
 .star-wrap {
+    display: flex;
     width: max-content;
     margin: 0 auto;
     position: relative;
@@ -993,8 +997,8 @@ input[type="radio"]:focus + label {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
 }
 @media (min-width: 840px) {
     .star-label {
@@ -1024,4 +1028,11 @@ input[type="radio"]:focus + label {
 
 .star:checked + .star-label ~ .star-label .star-shape {
     background-color: lightgray;
+}
+
+#text {
+    width: 100%;
+    background-color: #f2eae2;
+    padding: 7px;
+    border: none;
 }
