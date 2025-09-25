@@ -130,6 +130,7 @@ app.get("/api/customer", (req, res) => {
             .filter((line) => line != "")
             .map((user) => {
                 let userArr = user.split(", ");
+                console.log(userArr);
 
                 return {
                     name: userArr[0],

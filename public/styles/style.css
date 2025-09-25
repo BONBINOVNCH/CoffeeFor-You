@@ -388,13 +388,15 @@ input {
 .third_page_textImg {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
 .third_page_textImg_text {
+    text-align: center;
     width: 762px;
     font-size: 20px;
     color: #5c5c5c;
     margin-top: 0px;
+    margin: auto;
 }
 .third_page_foto {
     margin-top: 29px;
@@ -1035,4 +1037,9 @@ input[type="radio"]:focus + label {
     background-color: #f2eae2;
     padding: 7px;
     border: none;
+}
+
+.images_block {
+    display: flex;
+    justify-content: center;
 }
