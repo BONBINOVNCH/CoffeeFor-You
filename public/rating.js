@@ -5,7 +5,7 @@ $(document).ready(function () {
         const rating = {
             nickname: $("#nickname").val(),
             text: $("#text").val(),
-            img: $("#img").val(),
+            img: $("#img").val() || "img/5856.jpg",
             stars: $("input[type='radio'][name='star-radio']:checked").val(),
         };
         console.log(rating);

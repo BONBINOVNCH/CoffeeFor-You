@@ -34,7 +34,7 @@ google.addEventListener("click", (e) => {
             const rating = {
                 nickname: user.displayName,
                 text: $("#text").val(),
-                img: user.photoURL,
+                img: user.photoURL || "img/5856.jpg",
                 stars: $(
                     "input[type='radio'][name='star-radio']:checked"
                 ).val(),
