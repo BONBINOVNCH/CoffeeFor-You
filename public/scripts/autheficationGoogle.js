@@ -27,7 +27,6 @@ google.addEventListener("click", (e) => {
     signInWithPopup(auth, provider)
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
             const user = result.user;
 
             console.log(user);
@@ -42,7 +41,7 @@ google.addEventListener("click", (e) => {
             };
             console.log(rating);
 
-            if (rating) {
+            if (rating.nickname && rating.text && rating.img) {
                 axios
                     .post("/customer", rating)
                     .then((response) => {

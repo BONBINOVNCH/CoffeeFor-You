@@ -10,7 +10,7 @@ $(document).ready(function () {
         };
         console.log(rating);
 
-        if (rating) {
+        if (rating.nickname && rating.text && rating.img) {
             axios
                 .post("/customer", rating)
                 .then((response) => {

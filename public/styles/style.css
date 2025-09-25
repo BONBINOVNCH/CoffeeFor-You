@@ -1043,3 +1043,7 @@ input[type="radio"]:focus + label {
     display: flex;
     justify-content: center;
 }
+
+.mar {
+    margin: 10px;
+}
