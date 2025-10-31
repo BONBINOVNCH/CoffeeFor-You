@@ -6,19 +6,19 @@ const userSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    opinion: {
+    text: {
         type: String,
         required: true,
         trim: true,
     },
-    rating: {
+    stars: {
         type: Number,
         required: true,
         trim: true,
     },
-    image: {
-        type: Buffer,
-        required: false,
+    img: {
+        data: Buffer,
+        contentType: String,
     },
 });
 

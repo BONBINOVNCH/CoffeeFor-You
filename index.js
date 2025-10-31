@@ -77,9 +77,9 @@ app.post("/customer", async (req, res) => {
     try {
         const user = new User({
             name: rateInfo.nickname,
-            opinion: rateInfo.text,
-            rating: rateInfo.stars,
-            image: rateInfo.img,
+            text: rateInfo.text,
+            stars: rateInfo.stars,
+            img: rateInfo.img,
         });
         console.log(user);
         await user.save();
@@ -141,7 +141,10 @@ app.get("/popularProduct", (req, res) => {
     res.sendFile(path.join(__dirname, "pages", "popularProduct.html"));
 });
 
-app.get("/api/customer", (req, res) => {
+app.get("/api/customer", async (req, res) => {
+    const allUsers = await User.find();
+    console.log(allUsers);
+
     fs.readFile("rating.txt", "utf8", (err, data) => {
         const users = data
             .split("\n")
