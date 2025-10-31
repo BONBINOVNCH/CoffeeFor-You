@@ -145,23 +145,23 @@ app.get("/api/customer", async (req, res) => {
     const allUsers = await User.find();
     console.log(allUsers);
 
-    fs.readFile("rating.txt", "utf8", (err, data) => {
-        const users = data
-            .split("\n")
-            .filter((line) => line != "")
-            .map((user) => {
-                let userArr = user.split(", ");
-                console.log(userArr);
+    // fs.readFile("rating.txt", "utf8", (err, data) => {
+    //     const users = data
+    //         .split("\n")
+    //         .filter((line) => line != "")
+    //         .map((user) => {
+    //             let userArr = user.split(", ");
+    //             console.log(userArr);
 
-                return {
-                    name: userArr[0],
-                    text: userArr[1],
-                    img: userArr[2],
-                    stars: userArr[3],
-                };
-            });
-        res.json(users);
-    });
+    //             return {
+    //                 name: userArr[0],
+    //                 text: userArr[1],
+    //                 img: userArr[2],
+    //                 stars: userArr[3],
+    //             };
+    //         });
+    res.json(allUsers);
+    // });
 });
 
 app.get("/customer", (req, res) => {

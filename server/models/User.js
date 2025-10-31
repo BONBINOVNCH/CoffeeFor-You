@@ -17,8 +17,9 @@ const userSchema = new mongoose.Schema({
         trim: true,
     },
     img: {
-        data: Buffer,
-        contentType: String,
+        type: String,
+        required: false,
+        trim: true,
     },
 });
 
