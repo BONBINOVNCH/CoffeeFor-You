@@ -1,11 +1,13 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const User = require("./server/models/User.js");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const TelegramBot = require("node-telegram-bot-api");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
+const connectDB = require("./server/config/db");
 const port = process.env.port;
 
 const Telegram_bot_api = process.env.BOT_KEY;
@@ -18,6 +20,8 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
+
+connectDB();
 
 app.post("/", (req, res) => {
     const { email } = req.body;
@@ -60,6 +64,29 @@ app.post("/bestProduct", (req, res) => {
         if (err) throw err;
         res.send("Користувача зареєстровано та дані збережено.");
     });
+});
+
+app.post("/customer", async (req, res) => {
+    const rateInfo = req.body;
+    console.log(rateInfo);
+    const data = `${rateInfo.nickname}, ${rateInfo.text}, ${rateInfo.img}, ${rateInfo.stars} \n`;
+    fs.appendFile("rating.txt", data, (err) => {
+        if (err) throw err;
+    });
+
+    try {
+        const user = new User({
+            name: rateInfo.nickname,
+            text: rateInfo.text,
+            stars: rateInfo.stars,
+            img: rateInfo.img,
+        });
+        console.log(user);
+        await user.save();
+        return res.json({ message: "Registration complete" });
+    } catch (e) {
+        console.log(e);
+    }
 });
 
 let transporter = nodemailer.createTransport({
@@ -112,6 +139,29 @@ app.get("/home", (req, res) => {
 
 app.get("/popularProduct", (req, res) => {
     res.sendFile(path.join(__dirname, "pages", "popularProduct.html"));
+});
+
+app.get("/api/customer", async (req, res) => {
+    const allUsers = await User.find();
+    console.log(allUsers);
+
+    // fs.readFile("rating.txt", "utf8", (err, data) => {
+    //     const users = data
+    //         .split("\n")
+    //         .filter((line) => line != "")
+    //         .map((user) => {
+    //             let userArr = user.split(", ");
+    //             console.log(userArr);
+
+    //             return {
+    //                 name: userArr[0],
+    //                 text: userArr[1],
+    //                 img: userArr[2],
+    //                 stars: userArr[3],
+    //             };
+    //         });
+    res.json(allUsers);
+    // });
 });
 
 app.get("/customer", (req, res) => {
